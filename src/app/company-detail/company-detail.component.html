@@ -1,0 +1,34 @@
+<div class="header">
+  <h1 class="step-heading">
+    <span class="step-heading-indicator">2</span>
+    Review
+  </h1>
+</div>
+<div fxLayout.gt-sm="row"
+     fxLayout="column"
+     fxLayoutGap.gt-sm="6em"
+     fxLayoutGap="1em"
+     >
+
+  <img [src]="company.imageUrl"
+       class="image">
+  <div fxLayout="column"
+       fxLayoutAlign="space-between">
+
+    <div class="company-desc">
+      <h3>{{company.name}}</h3>
+      <p class="sub-headline">{{company.city}},
+        {{company.country}}</p>
+      <p class="description">{{company.description}}</p>
+      <p class="rating no-m"
+         *ngIf="company.score; else noRating">Rating:
+        {{company.score | number:'1.0-1'}}</p>
+      <p class="cat no-m">Category: {{company.category}}</p>
+      <ng-template #noRating>
+        <p class="rating no-rating">No reviews</p>
+      </ng-template>
+    </div>
+
+    <button class="main-button app-button">Continue</button>
+  </div>
+</div>

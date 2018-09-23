@@ -1,0 +1,16 @@
+
+  <div fxLayout="row"
+       fxLayoutGap="1em"
+       class="card-content">
+    <img [src]="company.imageUrl"
+         class="image">
+    <div class="body company-desc">
+      <h3>{{company.name}}</h3>
+      <p class="sub-headline">{{company.city}},
+        {{company.country}}</p>
+      <p class="description no-m">{{company.description}}</p>
+    </div>
+  </div>
+  <button class="main-button app-button"
+          [routerLink]="[company.id]">Submit</button>
+

@@ -1,0 +1,41 @@
+<div class="header"
+     fxLayout="column"
+     fxLayout.gt-sm="row"
+     fxLayoutGap="2em"
+     fxLayoutAlign.gt-sm="space-between end">
+  <h1 class="step-heading">
+    <span class="step-heading-indicator">1</span>
+    Select your business
+  </h1>
+  <div class="filter"
+       fxLayout="row"
+       fxLayoutGap="1em">
+    <a class="sort"
+       [class.active]="!!sort"
+       (click)="changeSort()">
+      <label>Sort:</label>
+      <ng-container *ngIf="sort === sortOrder.Desc; else asc">Z-A</ng-container>
+      <ng-template #asc>A-Z</ng-template>
+    </a>
+    <div class="category">
+      <label for="categorySelect">Category:</label>
+      <select id="categorySelect"
+              [formControl]="categoryControl">
+        <option value="">All</option>
+        <option *ngFor="let category of categorySource$ | async"
+                [value]="category">{{category}}</option>
+      </select>
+    </div>
+  </div>
+
+</div>
+
+<div class="company-list"
+     fxLayout="row wrap"
+     fxLayoutAlign="space-between stretch">
+  <app-company-card [company]="company"
+                    *ngFor="let company of companySource$ | async"
+                    fxFlex="0 0 100%"
+                    fxFlex.gt-sm="0 0 calc(50% - 0.5em)">
+  </app-company-card>
+</div>

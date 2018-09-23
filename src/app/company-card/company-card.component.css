@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image {
+  width: 6em;
+  height: 6em;
+  overflow: hidden;
+  flex: 0 0 6em;
+  /* IE user will see it deformed, as they see the internet */
+  object-fit: cover;
+  object-position: center;
+}
+
+.main-button {
+  width: 100%;
+  margin-top: .5em;
+  padding: 0 2em;
+}

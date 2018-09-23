@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.header {
+  margin-bottom: 2em;
+}
+
+.step-heading {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.step-heading-indicator {
+  border: solid 1px black;
+  display: inline-block;
+  font-size: 1.5em;
+  line-height: 2em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  margin-right: .5em;
+}
+
+.app-button {
+  border: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: white;
+  background-color: #86e21d;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.company-desc {
+  font-size: 14px;
+}
+
+
+.company-desc h3 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 0.8em;
+}
+
+.company-desc p{
+  font-style: italic;
+  margin-left: 1em;
+}
+
+.company-desc .sub-headline {
+  margin-top: 0.3em;
+  margin-bottom: .5em;
+}
+
+.company-desc .no-m {
+  margin-top: 0;
+  margin-bottom: 0;
+}

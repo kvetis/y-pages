@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  max-width: 64em;
+  margin: 0 auto;
+}
+
+.filter label {
+  font-weight: 700;
+  margin-right: .5em;
+}
+
+.filter .sort.active {
+  font-weight: 700;
+}
+
+
+app-company-card {
+  margin-bottom: 2em;
+}
